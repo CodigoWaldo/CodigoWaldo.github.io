@@ -1,7 +1,7 @@
 # SITIO WEB TEST
 
 
-[link al sitio](https://www.codigowaldo.github.io)
+[link al sitio](https://codigowaldo.github.io)
 
 ```
 HTML
