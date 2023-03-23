@@ -30,7 +30,7 @@ body {
     margin: auto; 
 }
 
-#contenedor2 {
+.contenedor2 {
     position: relative;
     margin: auto;    
     left: 0;
