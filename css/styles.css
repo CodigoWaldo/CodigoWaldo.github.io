@@ -5,8 +5,10 @@
 /* --------------- BODY */
 body {
     font-family: Tahoma, sans-serif;
-    background-color: #010305;
+    background-color: #ffffff;
     overflow: auto;    
+    display: flex;  
+    flex-direction: column;
 }
 
 /* --------------- PARTICULAS */
@@ -14,71 +16,62 @@ body {
     height: 100%;
     width: 100%;
     position: fixed;
-    z-index: -1;
+    z-index: 0;
     filter: blur(2px);
 }
 
-/* --------------- FOTO*/
-#contenedor1 {
-    width: 100%;
-    height: 350px;     
+/* --------------- CONTENEDORES*/
+.contenedor1 {
+    width: 350px;
+    height: 350px;      
+    border-radius: 50px;
+    position: relative;
+    display: flex;
+    margin: auto; 
 }
 
 #contenedor2 {
     position: relative;
-    margin: auto;
+    margin: auto;    
     left: 0;
     right: 0;
-    width: 350px;
-    height: 350px;        
-    border-radius: 5%;    
+    width: 300px;
+    height: 700px;        
+    border-radius: 20px;       
+    text-align: center;
+    z-index: 1;      
+    background-color: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(5px);     
 }
+
+/* --------------- IMAGEN*/
 
 img {
-    z-index: 1;
+  
     border-radius: 50%;
     box-shadow: 0px 3px 0px #373c3c;
-    width: 300px;
-    height: 300px;
-    padding: 5px;
-    position: absolute;
+    width: 300px;   
+    padding: 5px;    
     margin: auto;
-    right: 0;
-    left: 0;
-    top: 0;
-    bottom: 0;
 }
+ 
 
 /* --------------- TEXTO*/
-#contenedor3 {    
-    height: auto;
-    text-align: center;
-    text-justify: inter-word;      
-}
-
-#contenedor4 {
-    height: auto;
-    width: 350px;
-    margin: auto;
-    text-align: center;
-    text-justify: inter-word;    
-    backdrop-filter: blur(5px);       
-    border-radius: 5px; 
-}
 
 .article {
-    color: rgba(255, 255, 255, 0.712);
+    color: rgb(255, 255, 255);
     margin-bottom: 25px;
 }
 
 .article h1 {
     font-size: 30px;
-    margin-bottom: -10px;
+    margin-bottom: -10px;    
 }
 
 /* --------------- BOTON*/
+
 .button {    
-    background: grey;
+    background: rgba(128, 128, 128, 0.5);
     color: white;
     display: inline-block;
     font-size: 1.25em;
@@ -89,26 +82,32 @@ img {
     text-decoration: none;
     box-shadow: 0px 3px 0px #373c3c;
     border-radius: 50px;
+    
 }
 
-.button.LD {
-    background: #0e76a8;
+.button.LD:hover {
+    background: #0e77a8;
+    backdrop-filter: blur(1px);
 }
 
-.button.GH {
+.button.GH:hover {
     background: #333;
+    backdrop-filter: blur(1px);
 }
 
-.button.SF {
+.button.SF:hover {
     background: #ff6600;
+    backdrop-filter: blur(1px);
 }
 
-.button.IG {
+.button.IG:hover {
     background: #C13584;
+    backdrop-filter: blur(1px);
 }
 
-.button.YT {
+.button.YT:hover {
     background: #FF0000;
+    backdrop-filter: blur(1px);
 }
 
 .button:hover {
