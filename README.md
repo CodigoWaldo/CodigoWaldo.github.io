@@ -7,6 +7,6 @@ Sitio web creado para aprender y probar, también utilizo este espacio como mi s
 [link al sitio](https://codigowaldo.github.io)</br>
 
 ```
-Code: HTML - CSS
+Code: HTML - CSS - JS
 ```
 
