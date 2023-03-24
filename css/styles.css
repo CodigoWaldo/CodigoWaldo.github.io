@@ -85,32 +85,29 @@ img {
     
 }
 
+.button:hover{
+    backdrop-filter: blur(1px);    
+    transition: all .3s;
+    box-shadow: 0px 0px 0px;
+    width: 180px;
+}
+
 .button.LD:hover {
-    background: #0e77a8;
-    backdrop-filter: blur(1px);
+    background: #0e77a8;    
 }
 
 .button.GH:hover {
-    background: #333;
-    backdrop-filter: blur(1px);
+    background: #333;    
 }
 
 .button.SF:hover {
-    background: #ff6600;
-    backdrop-filter: blur(1px);
+    background: #ff6600;   
 }
 
 .button.IG:hover {
     background: #C13584;
-    backdrop-filter: blur(1px);
-}
+}    
 
 .button.YT:hover {
-    background: #FF0000;
-    backdrop-filter: blur(1px);
-}
-
-.button:hover {
-    box-shadow: 0px 0px 0px;
-    width: 180px;
+    background: #FF0000;   
 }
