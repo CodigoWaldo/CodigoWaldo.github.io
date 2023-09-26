@@ -8,11 +8,6 @@ const main = {
   // Refer https://ionicons.com/ and put the icon name inside iconName key
   connects: [  
     {
-      name: 'Linkedin',
-      iconName: 'logo-linkedin',
-      link: 'https://www.linkedin.com/in/walter-voegeli-650b78211/'
-    },  
-    {
       name: 'Instagram',
       iconName: 'logo-instagram',
       link: 'https://www.instagram.com/waldobook/'
