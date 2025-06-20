@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Invitación</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="recursos/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">  
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+ </head>
+
+ <style>
+  body {
+    min-height: 100vh;         
+    overflow-x: hidden;        
+    overflow-y: auto;          
+    display: flex;
+    justify-content: center;
+    align-items: start;        
+    padding: 2rem 1rem;
+    background: black;             
+    text-align: center;    
+    font-family: "Chocolate Classical Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .boton{
+    margin-top: 5px !important;
+    width: 100px;
+    margin: auto;
+    margin-bottom: 25px;
+  }
+  .card {
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.15);  
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    z-index: 0;
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: -1; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .img-cuadrada {
+    margin-top: 2rem;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;    
+    margin-bottom: 0 !important;    
+  }
+  .bloque-explicacion {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: -0.1rem !important;
+  }
+  h1 {
+    font-size: 2rem;
+    font-family: "Bowlby One SC", sans-serif;
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-top: 1.4rem;
+  }
+  p {      
+    margin: 0.1rem 0;
+    font-size: 1.1rem;
+  }  
+  .balloon {
+    position: absolute;
+    width: 40px;
+    height: 55px;
+    background: radial-gradient(circle, #ff4b2b, #ff416c);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: float 6s ease-in-out infinite;
+    opacity: 0.7;
+  }
+  
+  .balloon:nth-child(1) { left: 10%; animation-delay: 0s; }
+  .balloon:nth-child(2) { left: 30%; animation-delay: 1s; background: radial-gradient(circle, #30cfd0, #330867); }
+  .balloon:nth-child(3) { left: 60%; animation-delay: 2s; background: radial-gradient(circle, #f9d423, #ff4e50); }
+  .balloon:nth-child(4) { left: 80%; animation-delay: 3s; background: radial-gradient(circle, #667eea, #764ba2); }
+  @keyframes float {
+    0% { bottom: -60px; transform: translateX(0); }
+    50% { transform: translateX(20px); }
+    100% { bottom: 110%; transform: translateX(0); }
+  }
+</style>
+<body>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <audio id="musica-fondo" src="recursos/musiquita.mp3" loop></audio>  
+  <div class="card">
+    <h1><span id="nombre-invitado"></span></h1>
+    <h1> Estás invitad@ a la waldofest edición 2025</h1>
+    <p style="font-size: 1rem; margin-top: -0.5rem;font-style: italic;"> chill edition </p>
+    <img src="recursos/waldo.png" alt="Logo" class="img-cuadrada mb-3">
+    <button id="btn-musica" class="btn btn-sm btn-outline-light mt-3" style="margin-top: 5px !important;width: 100px;margin: auto;margin-bottom: 25px;" > ▶️ música  </button>
+    <p>📅 <strong>Fecha:</strong> Preguntame.</p>  
+    <p>⏰ <strong>Hora:</strong> 22:00 hs.</p>
+    <p class="m-0">📍 <strong>Lugar:</strong> Mi casa.</p>
+    <div class="bloque-explicacion mt-4">
+     <h1>¿Cómo es la onda?</h1>
+      <p>El plan es simple: comer, beber y jugar.</p>
+      <p>Yo, Waldo, me encargo de la comida; vos únicamente traé la consumición.</p>
+      <p>Luego soplo la vela (de la torta) y nos sacamos una fotito :)</p>
+      <p>Por último, jugaremos juegos para escaviar hasta que no demos más, así que no te hagás el bolud@, porque vas a tomar.</p>
+      <p>Confirmá que venís, así calculo la comida. TKM.</p>
+      <a href="https://www.youtube.com/watch?v=ZX2zMwxdhcU" target="_blank" class="btn btn-success btn-sm" style="margin-top: 2rem;min-width:100px;">VOY.</a>  
+      <a href="https://youtu.be/4n4rBrs5-LY?si=vQ_jFf83vZqtsQxW&t=12" target="_blank" class="btn btn-danger btn-sm" style="margin-top: 2rem;min-width:100px;">NO VOY.</a>  
+    </div>
+  </div>
+<!-- Scripts --> 
+ <script src="/js/bootstrap.bundle.min.js"></script> 
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const nombre = params.get("nombre");
+    if (nombre) {
+      const capitalizado = nombre.charAt(0).toUpperCase() + nombre.slice(1);
+      document.getElementById("nombre-invitado").textContent = capitalizado;
+    } else {
+      document.getElementById("nombre-invitado").textContent = "¡Invitado!";
+    }
+  </script> 
+  <script>
+    const audio = document.getElementById("musica-fondo");
+    const btn = document.getElementById("btn-musica");
+    btn.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play();
+      btn.innerHTML = "▶️ música";
+    } else {
+      audio.pause();
+      btn.innerHTML = "⏸️ música";
+    }
+  });
+  </script>
+  <!-- 
+  Asi que sos curios@? tomá esta 8=============D 
+-->
+</body>
+</html>

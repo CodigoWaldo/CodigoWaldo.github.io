@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackerman</title>
+    <link href="beauty.css" rel="stylesheet">
+    <script src="matrixrain.js"></script>
+    <script src="Cesar.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container1">
+            <div class="container2">
+                <h1> Crypt0_v0.1</h1>
+                <img src="1337/hacker.png">
+            </div>
+            <div class="container3">
+                <form id="cifrador" autocomplete="off">
+                    <input id="input-original" spellcheck="false" placeholder="Ingrese el texto" type="text"
+                        name="text">
+                </form>
+                <div id="resultado"></div>
+                <a>C l a v e</a>
+                <div class="rango">
+                    <input id="rango" type="range" value="10" min="1" max="20"
+                        oninput="this.nextElementSibling.value = this.value">
+                    <output>10</output>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--MATRIX-->
+    <canvas id="canvas"></canvas>
+    <script>
+        const matrixRain = new MatrixRain(
+            element = document.getElementById("canvas"),
+            width = window.innerWidth,
+            height = window.innerHeight,
+            charList = [
+                '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+                'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+                '+', '-', '*', '=', '<', '>', ':', '.',
+                'ﾊ', 'ﾐ', 'ﾋ', 'ｰ', 'ｳ', 'ｼ', 'ﾅ', 'ﾓ', 'ﾆ', 'ｻ', 'ﾜ', 'ﾂ', 'ｵ', 'ﾘ', 'ｱ', 'ﾎ', 'ﾃ', 'ﾏ', 'ｹ', 'ﾒ', 'ｴ', 'ｶ', 'ｷ', 'ﾑ', 'ﾕ', 'ﾗ', 'ｾ', 'ﾈ', 'ｽ', 'ﾀ', 'ﾇ', 'ﾍ'
+            ],
+            red = 0, green = 255, blue = 0,
+            randomColors = false,
+            flowRate = 1,
+            fps = 15,
+        );
+        window.addEventListener("resize", () => {
+            matrixRain.setCanvasDimensions(window.innerWidth, window.innerHeight);
+        });
+    </script>
+    <!--MUSIC-->
+    <iframe width="250" height="250" 
+        src="https://www.youtube.com/embed/cnV4L5M94qs?autoplay=1&si=0Wvb4ELnDxhqdW-D&amp;controls=0" 
+        title="PWNED" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+    </iframe>
+</body>
+
+</html>
+
+<!-------------------------------------------------
+/* Author : Walter Voegeli  
+/* MyWeb  : https://codigowaldo.github.io/
+/* GitHub : https://github.com/CodigoWaldo
+/* MIT license: http://opensource.org/licenses/MIT
+
+/* RESOURCES
+https://github.com/accesibleprogramacion/cifrador-cesar
+https://www.cssscript.com/matrix-digital-rain/
+/* ------------------------------------------------>

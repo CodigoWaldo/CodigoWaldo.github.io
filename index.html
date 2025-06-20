@@ -1,59 +1,96 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="Author" content="Walter Voegeli" lang="es">
-  <meta name="description"
-    content="Sitio web de Walter V. - Links a redes sociales y experimentos.">
-  <link rel="icon" href="Images/icono.png">
-
-  <!-- StyleSheets -->
-  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="./index.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>papers please.</title>
+  <link rel="icon" type="image/png" href="recursos/favicon.png">
+  <link href="/css/bootstrap.min.css" rel="stylesheet" />  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">  
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
 </head>
-
+<style>
+  body {
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .card {
+    background-image: url('recursos/seguridad.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2rem;
+    border-radius: 1rem;    
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    position: relative;
+    color: white;
+    filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.7));
+    align-content: center;
+  }
+  h1 {
+    font-size: 2rem;
+    font-family: "Bowlby One SC", sans-serif;
+    font-weight: 500;
+  }  
+  .contenido {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    position: relative;
+    z-index: 1;
+    max-width: 320px;    
+    margin: auto;
+    text-align: center;
+  }
+  .btn-custom {
+    background: linear-gradient(45deg, #007bff, #00c6ff);
+    border: none;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 198, 255, 0.5);
+  }
+  .btn-custom:hover {
+    background: linear-gradient(45deg, #0056b3, #0086b3);
+  }
+</style>
 <body>
-  <div id="main" class="relative h-screen border-b-2 lg:grid lg:grid-cols-2 lg:gap-4">
-    <!-- CSS: right sight border as line seperator 
-      - Phone top - down
-      - Lap right left.
-    -->
-    <div id="left" class="left lg:my-0 my-20 ">
-      <div class="imgBorder border-r-2">
-        <img id='img' src="" alt="" class="img m-auto w-64 main-image rounded-lg">
-      </div>
-    </div>
-
-    <!-- Main - Contents -->
-    <div id="contents" class="m-auto px-4 lg:my-20 child">
-      <div id="name" class="text-center lg:text-left text-6xl"></div>
-      <div id="role" style="color:#808080" class="text-center lg:text-left text-3xl"></div>
-      <div id="role2" style="color:#808080" class="text-center lg:text-left text-3xl"></div>
-      <div class="text-center lg:text-left text-1xl">Santa Fe • Argentina</div>
-      <div id="connects" class="text-center lg:text-left text-3xl my-4">
-
-      </div>
-      <div id="links" class="text-center lg:text-left"></div>
-      <a target="_top" id="mail" class="block text-center lg:text-left text-sm my-2"></a>
+  <div class="card">
+    <div class="contenido">
+      <h1 class="mb-3">¿Estás invitad@?</h1>
+      <input type="text" id="nombre" class="form-control mb-3" placeholder="Ingresá tu apodo." />    
+      <button class="btn btn-custom w-100" onclick="verificarInvitado()">Verificar</button>
+      <p id="mensaje" class="mt-3 text-danger"></p>
     </div>
   </div>
-
-  <!-- <ion-icon name="heart"></ion-icon> -->
-  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-  <script src="./data.js"></script>
-  <script src="./script.js"></script>
+  <script>
+    const invitados = 
+    [
+      "waldo", "brisa", "giuli", "sofi", "ladrillo", "rastrillo", "lucas", "lagu", "fran", "franco", "nahue", "nawe", "nae", "colo", "fran","mer","valen"
+      ,"tomi", "lobo", "paulo", "jime", "maga" 
+      ,"emi", "emilio", "jara", "cumjara", "leilu", "leila", "ele", "luli", "flor", "ori","exe","tute","jose"
+    ];    
+    function verificarInvitado() {
+      const input = document.getElementById("nombre").value.trim().toLowerCase();
+      const mensaje = document.getElementById("mensaje");
+      if (invitados.includes(input)) {        
+        window.location.href = "invitacion.html?nombre=" + encodeURIComponent(input);
+      } else if (input === "cami") {
+        window.location.href = "invitacionReina.html";
+      } else {
+        mensaje.textContent = "No estás en lista, SIGUIENTE";
+      }
+    }
+  </script>
+<!-- 
+  Asi que sos curios@? tomá esta 8=============D 
+-->
+  <script src="/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
-
-
-<!-------------------------------------------------
-/* Edited by : Walter Voegeli  
-/* Original author : https://sivanesh-s.github.io/
-/* MyWeb  : https://codigowaldo.github.io/
-/* GitHub : https://github.com/CodigoWaldo
-/* MIT license: http://opensource.org/licenses/MIT
-/* ------------------------------------------------>
