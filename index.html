@@ -80,9 +80,9 @@
       const input = document.getElementById("nombre").value.trim().toLowerCase();
       const mensaje = document.getElementById("mensaje");
       if (invitados.includes(input)) {        
-        window.location.href = "./invitacion.html?nombre=" + encodeURIComponent(input);
+        window.location.href = "invitacion.html?nombre=" + encodeURIComponent(input);
       } else if (input === "cami") {
-        window.location.href = "./invitacionReina.html";
+        window.location.href = "invitacionReina.html";
       } else {
         mensaje.textContent = "No estás en lista, SIGUIENTE";
       }
